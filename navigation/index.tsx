@@ -19,7 +19,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import HomeScreen from '../screens/HomeScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import {
   RootStackParamList,
   RootTabParamList,
@@ -108,11 +108,11 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name='TabTwo'
-        component={TabTwoScreen}
+        name='Profile'
+        component={ProfileScreen}
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name='code' color={color} />,
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <TabBarIcon name='user' color={color} />,
         }}
       />
     </BottomTab.Navigator>
