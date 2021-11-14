@@ -20,6 +20,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import { SoundsScreen } from '../screens/FeatureScreens/SoundsScreen/SoundsScreen';
 import {
   RootStackParamList,
   RootTabParamList,
@@ -64,6 +65,11 @@ function RootNavigator() {
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name='Modal' component={ModalScreen} />
       </Stack.Group>
+      <Stack.Screen
+        name='Sounds'
+        component={SoundsScreen}
+        options={{ title: 'Sounds' }}
+      />
     </Stack.Navigator>
   );
 }

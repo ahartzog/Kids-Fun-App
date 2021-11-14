@@ -1,17 +1,19 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Pressable } from 'react-native';
+
 import { Text, View } from '../components/Themed';
 type Props = {
   title: string;
   children?: React.ReactChild;
+  onPress?: () => void;
 };
 
 const FeatureCard = (props: Props) => {
   return (
-    <View style={localStyles.container}>
+    <Pressable style={localStyles.container} onPress={props.onPress}>
       <Text style={localStyles.title}>{props.title}</Text>
       <View style={localStyles.iconContainer}>{props.children}</View>
-    </View>
+    </Pressable>
   );
 };
 

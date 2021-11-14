@@ -21,7 +21,10 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <FeatureCard title='Dinosaurs'>
           <FontAwesome5 name='canadian-maple-leaf' size={60} color='white' />
         </FeatureCard>
-        <FeatureCard title='Sounds'>
+        <FeatureCard
+          title='Sounds'
+          onPress={() => navigation.navigate('Sounds')}
+        >
           <FontAwesome5 name='soundcloud' size={60} color='white' />
         </FeatureCard>
         <FeatureCard title='Space'>
