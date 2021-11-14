@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native';
 
 const buttonStyles = StyleSheet.create({
     primary: {
-  
     borderRadius: 15,
     borderColor: '#FFF',
     backgroundColor: '#198',
