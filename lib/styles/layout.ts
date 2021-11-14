@@ -15,6 +15,7 @@ const layoutStyles = StyleSheet.create({
       height: 1,
       width: '80%',
     },
+    
   });
   
 
