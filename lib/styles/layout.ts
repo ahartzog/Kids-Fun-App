@@ -15,6 +15,12 @@ const layoutStyles = StyleSheet.create({
       height: 1,
       width: '80%',
     },
+    mt5: {
+      marginTop: 5,
+    },
+    mt10: {
+      marginTop: 10,
+    }
     
   });
   
