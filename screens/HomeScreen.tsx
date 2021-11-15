@@ -30,7 +30,10 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
         <FeatureCard title='Space'>
           <FontAwesome5 name='space-shuttle' size={60} color='white' />
         </FeatureCard>
-        <FeatureCard title="How It's Made">
+        <FeatureCard
+          title="How It's Made"
+          onPress={() => navigation.navigate('HowItsMade')}
+        >
           <FontAwesome5 name='head-side-virus' size={40} color='white' />
         </FeatureCard>
       </View>
