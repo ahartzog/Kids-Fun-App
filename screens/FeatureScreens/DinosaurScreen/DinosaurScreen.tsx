@@ -3,6 +3,7 @@ import { WebView } from 'react-native-webview';
 import { Text, View } from '../../../components/Themed';
 import styles from '../../../lib/styles';
 import { Pressable } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 import { useApiData } from '../../../lib/api/useApiData';
 
 interface DinosaurData {
@@ -11,7 +12,7 @@ interface DinosaurData {
 }
 const DinosaurScreen = () => {
   //Get a random dinosaur
-
+  const { width, height } = useWindowDimensions();
   const [dinoCount, setDinosaurCount] = useState(1);
 
   const urlString =
@@ -24,7 +25,7 @@ const DinosaurScreen = () => {
   const getNewDino = () => {
     setDinosaurCount((e) => e + 1);
   };
-  console.log('Random dinosaur?', data);
+  //console.log('Random dinosaur?', data);
   if (isError) {
     return (
       <View>
@@ -43,6 +44,9 @@ const DinosaurScreen = () => {
   return (
     <View style={styles.layoutStyles.container}>
       <Text style={styles.layoutStyles.title}>DINOSAURS</Text>
+      <Pressable style={styles.buttonStyles.primary} onPress={getNewDino}>
+        <Text>Get Another Dinosaur</Text>
+      </Pressable>
       <View>
         <View>
           <Text
@@ -58,9 +62,14 @@ const DinosaurScreen = () => {
           <Text>{dinoData[0].Description}</Text>
         </View>
       </View>
-      <Pressable style={styles.buttonStyles.primary} onPress={getNewDino}>
-        <Text>Get Another Dinosaur</Text>
-      </Pressable>
+      <WebView
+        style={{ flex: 1, width, marginTop: 15 }}
+        //originWhitelist={['*']}
+        source={{
+          uri: `https://www.google.com/search?q=${dinoData[0].Name}&client=img`,
+          // baseUrl: 'https://www.youtube.com',
+        }}
+      />
     </View>
   );
 };
