@@ -19,5 +19,8 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    'react-native/no-inline-styles': 0,
+    'react/no-unescaped-entities': 0,
+  },
 };

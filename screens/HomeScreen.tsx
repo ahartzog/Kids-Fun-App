@@ -18,7 +18,10 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
           justifyContent: 'space-around',
         }}
       >
-        <FeatureCard title='Dinosaurs'>
+        <FeatureCard
+          onPress={() => navigation.navigate('Dinosaurs')}
+          title='Dinosaurs'
+        >
           <FontAwesome5 name='canadian-maple-leaf' size={60} color='white' />
         </FeatureCard>
         <FeatureCard

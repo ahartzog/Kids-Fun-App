@@ -22,6 +22,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import { SoundsScreen } from '../screens/FeatureScreens/SoundsScreen/SoundsScreen';
 import { HowItsMadeScreen } from '../screens/FeatureScreens/HowItsMadeScreen/HowItsMadeScreen';
+import { DinosaurScreen } from '../screens/FeatureScreens/DinosaurScreen/DinosaurScreen';
 import {
   RootStackParamList,
   RootTabParamList,
@@ -75,6 +76,11 @@ function RootNavigator() {
         name='HowItsMade'
         component={HowItsMadeScreen}
         options={{ title: "How It's Made" }}
+      />
+      <Stack.Screen
+        name='Dinosaurs'
+        component={DinosaurScreen}
+        options={{ title: 'Dinosairs' }}
       />
     </Stack.Navigator>
   );

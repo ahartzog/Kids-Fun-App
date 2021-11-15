@@ -9,7 +9,8 @@ const buttonStyles = StyleSheet.create({
     backgroundColor: '#198',
     paddingVertical: 20,
     paddingHorizontal: 30,
-    color: '#FFF'
+    color: '#FFF',
+    marginTop: 10,
     }
   });
   
