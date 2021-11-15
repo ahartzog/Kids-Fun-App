@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import styles from '../lib/styles';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -22,7 +22,12 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
           onPress={() => navigation.navigate('Dinosaurs')}
           title='Dinosaurs'
         >
-          <FontAwesome5 name='canadian-maple-leaf' size={60} color='white' />
+          <Image
+            source={require('../assets/images/diplodocus.png')}
+            height={60}
+            width={60}
+            style={{ height: 60, width: 60 }}
+          />
         </FeatureCard>
         <FeatureCard
           title='Sounds'

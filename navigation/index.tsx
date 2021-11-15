@@ -80,7 +80,7 @@ function RootNavigator() {
       <Stack.Screen
         name='Dinosaurs'
         component={DinosaurScreen}
-        options={{ title: 'Dinosairs' }}
+        options={{ title: 'Dinosaurs' }}
       />
     </Stack.Navigator>
   );
