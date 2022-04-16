@@ -44,6 +44,12 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
         >
           <FontAwesome5 name='head-side-virus' size={40} color='white' />
         </FeatureCard>
+        <FeatureCard
+          title='Dino Egg Hunt'
+          onPress={() => navigation.navigate('EggHunt')}
+        >
+          <FontAwesome5 name='eye' size={40} color='white' />
+        </FeatureCard>
       </View>
 
       <View style={styles.layoutStyles.mt10}>

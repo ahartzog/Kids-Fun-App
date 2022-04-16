@@ -29,6 +29,7 @@ import {
   RootTabScreenProps,
 } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { EggHuntScreen } from '../screens/FeatureScreens/EggHunt/EggHuntScreen';
 
 export default function Navigation({
   colorScheme,
@@ -81,6 +82,11 @@ function RootNavigator() {
         name='Dinosaurs'
         component={DinosaurScreen}
         options={{ title: 'Dinosaurs' }}
+      />
+      <Stack.Screen
+        name='EggHunt'
+        component={EggHuntScreen}
+        options={{ title: 'Egg Hunt' }}
       />
     </Stack.Navigator>
   );
